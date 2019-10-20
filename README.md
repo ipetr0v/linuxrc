@@ -1,0 +1,2 @@
+# linuxrc
+Linux configuration scripts
