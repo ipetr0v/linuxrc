@@ -8,9 +8,6 @@ sudo apt install -y wget curl git
 sudo apt install -y build-essential g++ make cmake gdb
 sudo apt install -y autoconf autogen automake pkg-config
 
-# HomeShick
-git clone --depth=1 https://github.com/andsens/homeshick.git $HOME/.homesick/repos/homeshick
-
 # Tmux/Screen
 sudo apt install -y tmux screen 
 git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
