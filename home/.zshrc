@@ -37,6 +37,9 @@ source $ZSH/oh-my-zsh.sh
 # HomeShick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 
+# Rust
+source $HOME/.cargo/env
+
 # User configuration
 export PATH=$HOME/bin:/usr/local/bin:$PATH
 export TERM="xterm-256color"

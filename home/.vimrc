@@ -78,8 +78,8 @@ noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
 " Tab handling
-noremap <leader>tt :tabnew
-noremap <leader>tn :tabnext
-noremap <leader>tp :tabprev
-noremap <leader>to :tabo
+noremap <leader>tt :tabnew<cr>
+noremap <leader>tn :tabnext<cr>
+noremap <leader>tp :tabprev<cr>
+noremap <leader>to :tabo<cr>
 
