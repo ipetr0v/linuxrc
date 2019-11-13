@@ -23,7 +23,7 @@ sudo apt install python3 python3-pip python3-dev
 sudo pip3 install requests
 
 # Improved search
-sudo apt install -y ack-grep silversearcher-ag
+sudo apt install -y ripgrep ack-grep silversearcher-ag
 
 # Improved diff
 sudo mkdir /opt/diff-so-fancy
