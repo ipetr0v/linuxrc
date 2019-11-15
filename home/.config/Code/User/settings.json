@@ -1,0 +1,88 @@
+{
+    "workbench.iconTheme": "vscode-icons",
+    "window.zoomLevel": 0,
+
+    "vim.leader": "<Space>",
+    "vim.normalModeKeyBindingsNonRecursive": [
+        {
+          "before": ["<Leader>", "w"],
+          "commands": [
+            "workbench.action.files.save"
+          ]
+        },
+        {
+          "before": ["<Leader>", "q"],
+          "after": [":", "q", "<cr>"]
+        },
+        {
+          "before": ["<Leader>", "w", "q"],
+          "after": [":", "w", "q", "<cr>"]
+        },
+        {
+          "before": ["<Leader>", "x"],
+          "after": [":", "x", "<cr>"]
+        },
+        {
+          "before": ["H"],
+          "after": ["5", "h"]
+        },
+        {
+          "before": ["J"],
+          "after": ["5", "j"]
+        },
+        {
+          "before": ["K"],
+          "after": ["5", "k"]
+        },
+        {
+          "before": ["L"],
+          "after": ["5", "l"]
+        },
+        {
+          "before": ["<Leader>", "j"],
+          "after": ["J"]
+        },
+        {
+          "before": ["<C-h>"],
+          "after": ["<C-w>", "h"]
+        },
+        {
+          "before": ["<C-j>"],
+          "after": ["<C-w>", "j"]
+        },
+        {
+          "before": ["<C-k>"],
+          "after": ["<C-w>", "k"]
+        },
+        {
+          "before": ["<C-l>"],
+          "after": ["<C-w>", "l"]
+        },
+        {
+            "before": ["<Leader>", "t", "t"],
+            "commands": [":tabnew"]
+        },
+        {
+            "before": ["<Leader>", "t", "n"],
+            "commands": [":tabnext"]
+        },
+        {
+            "before": ["<Leader>", "t", "p"],
+            "commands": [":tabprev"]
+        },
+        {
+            "before": ["<Leader>", "t", "o"],
+            "commands": [":tabo"]
+        },
+        {
+            "before": ["<Leader>", "/"],
+            "commands": [":noh"]
+        }
+    ],
+    "vim.hlsearch": true,
+    "editor.fontSize": 15,
+    "C_Cpp.updateChannel": "Insiders",
+    "editor.minimap.enabled": false,
+    "vim.useSystemClipboard": true,
+    "C_Cpp.default.intelliSenseMode": "clang-x64",
+}

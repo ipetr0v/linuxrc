@@ -40,6 +40,7 @@ typeset -A ZSH_HIGHLIGHT_STYLES
 ZSH_HIGHLIGHT_STYLES[path]=none
 ZSH_HIGHLIGHT_STYLES[path_prefix]=none
 ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+ZSH_COLORIZE_STYLE="native"
 
 # HomeShick
 source "$HOME/.homesick/repos/homeshick/homeshick.sh"

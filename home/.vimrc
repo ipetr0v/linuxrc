@@ -10,6 +10,9 @@ set rtp+=~/.vim/bundle/Vundle.vim
 call vundle#begin()
 Plugin 'VundleVim/Vundle.vim'
 
+" General
+Plugin 'tpope/vim-sensible'
+
 " Motion
 Plugin 'tpope/vim-surround'
 Plugin 'justinmk/vim-sneak'
@@ -51,13 +54,17 @@ set completeopt=longest
 
 set mouse=a
 
+" Natural split opening
+set splitbelow
+set splitright
+
 " Mappings
 let mapleader = "\<space>"
 
-noremap <leader>w :w<cr>
-noremap <leader>q :q<cr>
-noremap <leader>wq :wq<cr>
-noremap <leader>x :x<cr>
+noremap <silent> <leader>w :w<cr>
+noremap <silent> <leader>q :q<cr>
+noremap <silent> <leader>wq :wq<cr>
+noremap <silent> <leader>x :x<cr>
 
 " Clean highlighted text
 noremap <leader>/ :noh<cr>
@@ -71,15 +78,15 @@ noremap L 5l
 " Redefine join
 noremap <leader>j J
 
-" Tab switching
+" Split navigation
 noremap <C-h> <C-w>h
 noremap <C-j> <C-w>j
 noremap <C-k> <C-w>k
 noremap <C-l> <C-w>l
 
 " Tab handling
-noremap <leader>tt :tabnew<cr>
-noremap <leader>tn :tabnext<cr>
-noremap <leader>tp :tabprev<cr>
-noremap <leader>to :tabo<cr>
+noremap <silent> <leader>tt :tabnew<cr>
+noremap <silent> <leader>tn :tabnext<cr>
+noremap <silent> <leader>tp :tabprev<cr>
+noremap <silent> <leader>to :tabo<cr>
 
