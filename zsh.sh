@@ -1,15 +1,10 @@
 #!/usr/bin/env bash
 
 sudo apt install -y zsh
+mkdir -p $HOME/.zsh
 
-# oh-my-zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
-
-# Custom plugins
-git clone --depth=1 https://github.com/djui/alias-tips.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/alias-tips
-git clone --depth=1 https://github.com/zsh-users/zsh-completions ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-completions
-git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/plugins/zsh-syntax-highlighting
-git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ${ZSH_CUSTOM:=~/.oh-my-zsh/custom}/themes/powerlevel10k
+# Plugin Manager
+curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
 
 # Fonts
 sudo apt install -y fonts-powerline

@@ -84,5 +84,4 @@
     "C_Cpp.updateChannel": "Insiders",
     "editor.minimap.enabled": false,
     "vim.useSystemClipboard": true,
-    "C_Cpp.default.intelliSenseMode": "clang-x64",
 }
