@@ -1,0 +1,61 @@
+# Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
+# Initialization code that may require console input (password prompts, [y/n]
+# confirmations, etc.) must go above this block, everything else may go below.
+if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]; then
+  source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
+fi
+
+# Plugin Manager - AntiBody
+source <(antibody init)
+
+# Plugins
+## Oh-My-ZSH
+export ZSH="$(antibody home)/https-COLON--SLASH--SLASH-github.com-SLASH-robbyrussell-SLASH-oh-my-zsh"
+antibody bundle robbyrussell/oh-my-zsh
+antibody bundle robbyrussell/oh-my-zsh path:plugins/colored-man-pages
+antibody bundle robbyrussell/oh-my-zsh path:plugins/colorize
+antibody bundle robbyrussell/oh-my-zsh path:plugins/common-aliases
+antibody bundle robbyrussell/oh-my-zsh path:plugins/cp
+antibody bundle robbyrussell/oh-my-zsh path:plugins/docker
+antibody bundle robbyrussell/oh-my-zsh path:plugins/extract
+antibody bundle robbyrussell/oh-my-zsh path:plugins/fasd
+antibody bundle robbyrussell/oh-my-zsh path:plugins/git
+antibody bundle robbyrussell/oh-my-zsh path:plugins/history
+antibody bundle robbyrussell/oh-my-zsh path:plugins/python
+antibody bundle robbyrussell/oh-my-zsh path:plugins/rsync
+antibody bundle robbyrussell/oh-my-zsh path:plugins/screen
+antibody bundle robbyrussell/oh-my-zsh path:plugins/tmux
+
+## Other
+antibody bundle djui/alias-tips
+antibody bundle zsh-users/zsh-completions
+antibody bundle zsh-users/zsh-syntax-highlighting
+antibody bundle romkatv/powerlevel10k
+
+# Theme - PowerLevel10k
+## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
+
+ZSH_THEME="powerlevel10k/powerlevel10k"
+CASE_SENSITIVE="true"
+HIST_STAMPS="dd/mm/yyyy"
+
+## Highlight settings
+typeset -A ZSH_HIGHLIGHT_STYLES
+ZSH_HIGHLIGHT_STYLES[path]=none
+ZSH_HIGHLIGHT_STYLES[path_prefix]=none
+ZSH_HIGHLIGHT_STYLES[alias]='fg=magenta,bold'
+ZSH_COLORIZE_STYLE="native"
+
+# HomeShick
+source "$HOME/.homesick/repos/homeshick/homeshick.sh"
+
+# Rust
+[[ ! -f $HOME/.cargo/env ]] || source $HOME/.cargo/env
+
+# User configuration
+export PATH=$HOME/bin:/usr/local/bin:$PATH
+export TERM="xterm-256color"
+export EDITOR='vim'
+export MANPATH="/usr/local/man:$MANPATH"
+
