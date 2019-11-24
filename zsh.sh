@@ -5,7 +5,7 @@ mkdir -p $HOME/.zsh
 
 # Plugin Manager
 curl -L git.io/antigen > $HOME/.zsh/antigen.zsh
-#curl -sfL git.io/antibody | sh -s - -b $HOME/bin
+#curl -sfL git.io/antibody | sh -s - -b $HOME/.local/bin
 
 # Fonts
 sudo apt install -y fonts-powerline

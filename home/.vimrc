@@ -17,6 +17,7 @@ Plugin 'tpope/vim-sensible'
 Plugin 'tpope/vim-surround'
 Plugin 'justinmk/vim-sneak'
 Plugin 'easymotion/vim-easymotion'
+Plugin 'christoomey/vim-tmux-navigator'
 
 " Code
 Plugin 'valloric/youcompleteme'

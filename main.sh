@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-mkdir -p $HOME/bin
+mkdir -p $HOME/.local/bin
 
 sudo apt update
 sudo apt upgrade

@@ -1,8 +1,11 @@
 #!/usr/bin/env bash
 
 # Improved diff
-wget https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy -O $HOME/bin/diff-so-fancy
-chmod +x $HOME/bin
+wget https://raw.githubusercontent.com/so-fancy/diff-so-fancy/master/third_party/build_fatpack/diff-so-fancy -O $HOME/.local/bin/diff-so-fancy
+#chmod +x $HOME/.local/bin
+
+# User configuration
+git config --global pager.branch false
 
 # Setup improved diff
 git config --global core.pager "diff-so-fancy | less --tabs=4 -RFX"
