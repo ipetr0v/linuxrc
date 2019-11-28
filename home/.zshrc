@@ -5,52 +5,45 @@ if [[ -r "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh" ]]
   source "${XDG_CACHE_HOME:-$HOME/.cache}/p10k-instant-prompt-${(%):-%n}.zsh"
 fi
 
-#ZSH_THEME="agnoster"
+# Plugin Manager - AntiGen
+source $HOME/.zsh/antigen.zsh
+
+# Plugins
+## Oh-My-ZSH
+antigen use oh-my-zsh
+antigen bundle colored-man-pages
+antigen bundle colorize
+antigen bundle common-aliases
+antigen bundle cp
+antigen bundle docker
+antigen bundle extract
+antigen bundle fasd
+antigen bundle git
+antigen bundle history
+antigen bundle python
+antigen bundle rsync
+antigen bundle screen
+antigen bundle tmux
+
+## Other
+antigen bundle djui/alias-tips
+antigen bundle zsh-users/zsh-autosuggestions
+antigen bundle zsh-users/zsh-completions
+antigen bundle zsh-users/zsh-history-substring-search
+antigen bundle zsh-users/zsh-syntax-highlighting
+
+antigen theme romkatv/powerlevel10k
+
+# Apply plugins
+antigen apply
+
+# Theme - PowerLevel10k
+## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
+[[ ! -f $HOME/.zsh/p10k.zsh ]] || source $HOME/.zsh/p10k.zsh
+
 ZSH_THEME="powerlevel10k/powerlevel10k"
 CASE_SENSITIVE="true"
 HIST_STAMPS="dd/mm/yyyy"
-
-# ZPlug
-ZPLUG_HOME=$HOME/.zsh/zplug
-source $ZPLUG_HOME/init.zsh
-zplug 'zplug/zplug', hook-build:'zplug --self-manage'
-
-zplug "djui/alias-tips"
-
-zplug "plugins/colored-man-pages", from:oh-my-zsh
-zplug "plugins/colorize", from:oh-my-zsh
-zplug "plugins/common-aliases", from:oh-my-zsh
-zplug "plugins/cp", from:oh-my-zsh
-zplug "plugins/docker", from:oh-my-zsh
-zplug "plugins/extract", from:oh-my-zsh
-zplug "plugins/fasd", from:oh-my-zsh
-zplug "plugins/git", from:oh-my-zsh
-zplug "plugins/history", from:oh-my-zsh
-zplug "plugins/python", from:oh-my-zsh
-zplug "plugins/rsync", from:oh-my-zsh
-zplug "plugins/screen", from:oh-my-zsh
-zplug "plugins/tmux", from:oh-my-zsh
-
-zplug "romkatv/powerlevel10k"
-
-zplug "zsh-users/zsh-completions"
-zplug "zsh-users/zsh-history-substring-search"
-zplug "zsh-users/zsh-syntax-highlighting"
-
-# Install plugins if there are plugins that have not been installed
-if ! zplug check --verbose; then
-    printf "Install? [y/N]: "
-    if read -q; then
-        echo; zplug install
-    fi
-fi
-
-# Then, source plugins and add commands to $PATH
-zplug load --verbose
-
-# PowerLevel10k
-## To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
-[[ ! -f $HOME/.p10k.zsh ]] || source $HOME/.p10k.zsh
 
 ## Highlight settings
 typeset -A ZSH_HIGHLIGHT_STYLES
@@ -66,7 +59,7 @@ source "$HOME/.homesick/repos/homeshick/homeshick.sh"
 [[ ! -f $HOME/.cargo/env ]] || source $HOME/.cargo/env
 
 # User configuration
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 export TERM="xterm-256color"
 export EDITOR='vim'
 export MANPATH="/usr/local/man:$MANPATH"
