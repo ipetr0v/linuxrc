@@ -84,4 +84,6 @@
     "C_Cpp.updateChannel": "Insiders",
     "editor.minimap.enabled": false,
     "vim.useSystemClipboard": true,
+    "explorer.confirmDragAndDrop": false,
+    "editor.rulers": [80, 100],
 }
